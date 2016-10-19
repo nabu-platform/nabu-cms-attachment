@@ -1,0 +1,26 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" disabled="false" id="560cebe1-758c-483c-9448-0d9ea937e8a2">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" id="0ab086cb-0612-4567-b4c2-211bb8de5621">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="6298f922-6e4a-44a7-ab09-1e01f0c9c559" serviceId="nabu.utils.Date.format" resultName="result5d3a1eb75f554d4d98e3653c1e9fab65" invocationOrder="0" temporaryMapping="true" x="39" y="98">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="7df13aa0-f4d8-471b-9857-458124c732af" fixedValue="true" optional="false" mask="false">
+				<from>EEE, dd MMM yyyy HH:mm:ss 'GMT'</from>
+				<to>properties/format</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="2932e5a5-49ce-4115-a255-5a18a72de6d2" fixedValue="true" optional="false" mask="false">
+				<from>UTC</from>
+				<to>properties/timezone</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="64a10321-5f46-4b98-8140-47e602b92c4f" fixedValue="true" optional="false" mask="false">
+				<from>en</from>
+				<to>properties/language</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="e8de19a7-ce5c-44df-aefd-b0c3356ebdcd" fixedValue="false" optional="false" mask="false">
+				<from>input/date</from>
+				<to>date</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="499d95cc-830f-4a44-8e91-3d7f8372c42f" fixedValue="false" optional="false" mask="false">
+			<from>result5d3a1eb75f554d4d98e3653c1e9fab65/string</from>
+			<to>output/formattedDate</to>
+		</steps>
+	</steps>
+</sequence>

@@ -1,0 +1,4 @@
+<structure name="root">
+    <field minOccurs="0" name="datastoreContext" type="java.lang.String"/>
+    <field maxOccurs="unbounded" minOccurs="0" name="allowedThumbnailSizes" type="java.lang.String"/>
+</structure>
