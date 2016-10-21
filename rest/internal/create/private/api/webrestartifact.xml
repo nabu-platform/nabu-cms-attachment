@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<restInterface>
+    <method>POST</method>
+    <path>/node/{nodeId}/attachment</path>
+    <queryParameters>group, title, description</queryParameters>
+    <headerParameters>Content-Type, Nabu-Transfer-Encoding, Content-Disposition</headerParameters>
+    <role>$user</role>
+    <permissionContext>=input/path/nodeId</permissionContext>
+    <permissionAction>attachment.create</permissionAction>
+    <inputAsStream>true</inputAsStream>
+    <output>nabu.cms.attachments.types.rest.attachmentOutput</output>
+    <configurationType>nabu.cms.attachments.configuration</configurationType>
+</restInterface>

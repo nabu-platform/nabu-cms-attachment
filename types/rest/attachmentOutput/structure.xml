@@ -1,0 +1,13 @@
+<structure name="root">
+    <field name="id" primaryKey="true" type="java.util.UUID"/>
+    <field name="type" type="java.lang.String"/>
+    <field name="subType" type="java.lang.String"/>
+    <field minOccurs="0" name="width" type="java.lang.Double"/>
+    <field minOccurs="0" name="height" type="java.lang.Double"/>
+    <field name="name" type="java.lang.String"/>
+    <field minOccurs="0" name="size" type="java.lang.Long"/>
+    <field minOccurs="0" name="title" type="java.lang.String"/>
+    <field minOccurs="0" name="description" type="java.lang.String"/>
+    <field name="external" type="java.lang.Boolean"/>
+    <field foreignKey="nabu.cms.attachments.types.model.attachments.AttachmentGroup:id" name="attachmentGroupId" type="java.util.UUID"/>
+</structure>

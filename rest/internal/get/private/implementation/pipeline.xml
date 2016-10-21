@@ -1,0 +1,7 @@
+<structure interface="$self:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure definition="nabu.cms.attachments.types.model.attachments.NodeAttachment" minOccurs="0" name="attachment" namespace="nabu.cms.attachments.types.model.attachments"/>
+    <field name="nodeId" type="java.util.UUID"/>
+    <field minOccurs="0" name="name" type="java.lang.String"/>
+</structure>

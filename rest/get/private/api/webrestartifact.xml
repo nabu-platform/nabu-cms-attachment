@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<restInterface>
-    <method>GET</method>
-    <path>/node/attachment/{attachmentId}</path>
-    <queryParameters>thumbnail</queryParameters>
-    <responseHeaders>Content-Type, Content-Length, Last-Modified</responseHeaders>
-    <outputAsStream>true</outputAsStream>
-    <configurationType>nabu.cms.attachments.configuration</configurationType>
-</restInterface>

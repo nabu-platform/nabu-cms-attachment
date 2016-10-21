@@ -1,0 +1,21 @@
+<jdbcService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<outputDefinition>nabu.cms.attachments.types.model.attachments.NodeAttachment</outputDefinition>
+	<sql>select
+	id,
+	created,
+	modified,
+	parent_id,
+	type,
+	sub_type,
+	size,
+	width,
+	height,
+	name,
+	title,
+	description,
+	uri,
+	node_id,
+	attachment_group_id
+from node_attachment
+where id = :id</sql>
+</jdbcService>

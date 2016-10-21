@@ -1,0 +1,13 @@
+<structure name="pipeline">
+    <structure name="input">
+        <structure collectionName="Users" definition="nabu.cms.core.types.model.core.User" name="user" namespace="nabu.cms.core.types.model.core"/>
+        <field foreignKey="nabu.cms.core.types.model.core.Node:id" name="nodeId" primaryKey="true" type="java.util.UUID"/>
+        <field foreignKey="nabu.cms.core.types.model.core.Node:id" name="attachmentGroupId" primaryKey="true" type="java.util.UUID"/>
+        <field name="uri" type="java.net.URI"/>
+        <field name="contentType" type="java.lang.String"/>
+        <field minOccurs="0" name="size" type="java.lang.Long"/>
+        <field name="name" type="java.lang.String"/>
+    </structure>
+    <structure name="output"/>
+    <structure definition="nabu.cms.attachments.types.model.attachments.NodeAttachment" name="attachment" namespace="nabu.cms.attachments.types.model.attachments"/>
+</structure>
