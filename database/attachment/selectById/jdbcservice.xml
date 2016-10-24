@@ -16,6 +16,6 @@
 	uri,
 	node_id,
 	attachment_group_id
-from node_attachment
+from node_attachments
 where id = :id</sql>
 </jdbcService>

@@ -5,6 +5,6 @@
 	created,
 	modified,
 	name
-from attachment_group
+from attachment_groups
 where id = :id</sql>
 </jdbcService>
