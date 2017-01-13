@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8' ?>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Fri Oct 21 14:27:42 CEST 2016'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Nov 22 08:58:43 CET 2016'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.34(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -213,6 +213,30 @@
               </UML:StructuralFeature.multiplicity>
               <UML:StructuralFeature.type>
                 <UML:DataType href = 'http://argouml.org/user-profiles/baseTypes.xmi#be.nabu.uml.xmi:base:types:0000000000000004'/>
+              </UML:StructuralFeature.type>
+            </UML:Attribute>
+            <UML:Attribute xmi.id = '127-0-1-1--11f47e12:15881e67e95:-8000:0000000000001948'
+              name = 'language' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              changeability = 'changeable' targetScope = 'instance'>
+              <UML:StructuralFeature.multiplicity>
+                <UML:Multiplicity xmi.id = '127-0-1-1--11f47e12:15881e67e95:-8000:000000000000194D'>
+                  <UML:Multiplicity.range>
+                    <UML:MultiplicityRange xmi.id = '127-0-1-1--11f47e12:15881e67e95:-8000:000000000000194C'
+                      lower = '0' upper = '1'/>
+                  </UML:Multiplicity.range>
+                </UML:Multiplicity>
+              </UML:StructuralFeature.multiplicity>
+              <UML:ModelElement.taggedValue>
+                <UML:TaggedValue xmi.id = '127-0-1-1--11f47e12:15881e67e95:-8000:000000000000194B'
+                  isSpecification = 'false'>
+                  <UML:TaggedValue.dataValue>Attachments can have a certain language if they are documents or contain text in any way</UML:TaggedValue.dataValue>
+                  <UML:TaggedValue.type>
+                    <UML:TagDefinition xmi.idref = '127-0-1-1-1d2010b9:157be19e2fe:-8000:000000000000123D'/>
+                  </UML:TaggedValue.type>
+                </UML:TaggedValue>
+              </UML:ModelElement.taggedValue>
+              <UML:StructuralFeature.type>
+                <UML:DataType href = 'http://argouml.org/user-profiles/baseTypes.xmi#be.nabu.uml.xmi:base:types:0000000000000001'/>
               </UML:StructuralFeature.type>
             </UML:Attribute>
           </UML:Classifier.feature>

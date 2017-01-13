@@ -8,6 +8,6 @@
     <permissionContext>=input/path/nodeId</permissionContext>
     <permissionAction>attachment.create</permissionAction>
     <inputAsStream>true</inputAsStream>
-    <output>nabu.cms.attachments.types.rest.attachmentOutput</output>
-    <configurationType>nabu.cms.attachments.configuration</configurationType>
+    <output>nabu.cms.attachment.types.rest.attachmentOutput</output>
+    <configurationType>nabu.cms.attachment.configuration</configurationType>
 </restInterface>

@@ -4,8 +4,8 @@
     <field maxOccurs="unbounded" minOccurs="0" name="contentType" type="java.lang.String"/>
     <field maxOccurs="unbounded" minOccurs="0" name="contentDisposition" type="java.lang.String"/>
     <field minOccurs="0" name="name" type="java.lang.String"/>
-    <structure definition="nabu.cms.attachments.types.model.attachments.NodeAttachment" name="attachment" namespace="nabu.cms.attachments.types.model.attachments"/>
+    <structure collectionName="NodeAttachments" definition="nabu.cms.attachment.types.model.attachments.NodeAttachment" name="attachment" namespace="nabu.cms.attachments.types.model.attachments"/>
     <field name="uri" type="java.net.URI"/>
     <structure collectionName="Users" definition="nabu.cms.core.types.model.core.User" name="user" namespace="nabu.cms.core.types.model.core"/>
-    <structure definition="nabu.cms.attachments.types.model.attachments.AttachmentGroup" minOccurs="0" name="attachmentGroup" namespace="nabu.cms.attachments.types.model.attachments"/>
+    <structure collectionName="AttachmentGroups" definition="nabu.cms.attachment.types.model.attachments.AttachmentGroup" minOccurs="0" name="attachmentGroup" namespace="nabu.cms.attachments.types.model.attachments"/>
 </structure>

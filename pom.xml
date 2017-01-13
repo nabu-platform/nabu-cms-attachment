@@ -4,9 +4,9 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nabu.cms</groupId>
-	<artifactId>attachments</artifactId>
-	<version>${nabu.cms-attachments-version}</version>
-	<name>attachments</name>
+	<artifactId>attachment</artifactId>
+	<version>${nabu.cms-attachment-version}</version>
+	<name>attachment</name>
 	
 	<parent>
 		<groupId>be.nabu</groupId>
