@@ -2,7 +2,7 @@
 <restInterface>
     <method>POST</method>
     <path>/node/{nodeId}/attachment</path>
-    <queryParameters>group, title, description</queryParameters>
+    <queryParameters>groupId, title, description, languageId, meta</queryParameters>
     <headerParameters>Content-Type, Nabu-Transfer-Encoding, Content-Disposition</headerParameters>
     <role>$user</role>
     <permissionContext>=input/path/nodeId</permissionContext>

@@ -20,6 +20,7 @@
 	meta,
 	owner_id,
 	node_id
-from node_attachments
-where node_id = :nodeId</sql>
+from node_attachments a join master_data_entries m on a.attachment_group_id = m.id
+where parent_id = :parentId
+and m.name = :attachmentGroup </sql>
 </jdbcService>

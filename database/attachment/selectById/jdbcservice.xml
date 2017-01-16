@@ -14,8 +14,12 @@
 	title,
 	description,
 	uri,
-	node_id,
-	attachment_group_id
+	external,
+	language_id,
+	attachment_group_id,
+	meta,
+	owner_id,
+	node_id
 from node_attachments
 where id = :id</sql>
 </jdbcService>

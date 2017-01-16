@@ -1,0 +1,12 @@
+<structure name="pipeline">
+    <structure name="input">
+        <structure definition="nabu.cms.attachment.configuration" name="configuration"/>
+        <structure collectionName="NodeAttachments" definition="nabu.cms.attachment.types.model.attachments.NodeAttachment" name="original" namespace="nabu.cms.attachments.types.model.attachments"/>
+        <field name="name" type="java.lang.String"/>
+    </structure>
+    <structure name="output">
+        <structure collectionName="NodeAttachments" definition="nabu.cms.attachment.types.model.attachments.NodeAttachment" name="thumbnail" namespace="nabu.cms.attachments.types.model.attachments"/>
+    </structure>
+    <field minOccurs="0" name="width" type="java.lang.Integer"/>
+    <field minOccurs="0" name="height" type="java.lang.Integer"/>
+</structure>

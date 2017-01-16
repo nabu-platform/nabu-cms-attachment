@@ -1,7 +1,11 @@
-<structure name="root">
-    <field name="connectionId" type="java.lang.String"/>
+<structure name="attachment">
+    <field minOccurs="0" name="connectionId" type="java.lang.String"/>
     <field minOccurs="0" name="datastoreContext" type="java.lang.String"/>
     <field maxOccurs="unbounded" minOccurs="0" name="allowedContentTypes" type="java.lang.String"/>
-    <field maxOccurs="unbounded" minOccurs="0" name="allowedThumbnailSizes" type="java.lang.String"/>
     <field minOccurs="0" name="maxAmountOfAttachments" type="java.lang.Integer"/>
+    <structure maxOccurs="unbounded" minOccurs="0" name="thumbnails">
+        <field name="name" type="java.lang.String"/>
+        <field minOccurs="0" name="width" type="java.lang.Integer"/>
+        <field minOccurs="0" name="height" type="java.lang.Integer"/>
+    </structure>
 </structure>
