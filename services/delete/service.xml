@@ -1,0 +1,59 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" disabled="false" id="47ee1441-1837-4175-b8c8-967f5c75239a">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" id="bf2b9e82-682a-4411-9d56-8aeff4352891">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="6b2524bd-eb43-4472-8778-1ca54430fe39" invocationOrder="0" temporaryMapping="true" serviceId="nabu.cms.attachment.database.attachment.selectByParentId" resultName="result34b57ab14d154e9cbfd0da3e65e068b5" y="69" x="15">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="c0d055a3-9f5e-44c9-8b2b-3dcf01cb6539" optional="false" mask="false" fixedValue="false">
+				<from>input/connectionId</from>
+				<to>connection</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="224d50f6-b7a5-42e4-b94b-accf2a8d80b3" optional="false" mask="false" fixedValue="false">
+				<from>input/attachment/id</from>
+				<to>parameters/parentId</to>
+			</steps>
+			<asynchronous>false</asynchronous>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="ab0ecf5f-a65f-4b62-a58c-ab5489958655" optional="false" mask="false" fixedValue="false">
+			<from>result34b57ab14d154e9cbfd0da3e65e068b5/results</from>
+			<to>children</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.For" disabled="false" comment="Delete children" id="37450565-38dd-41bd-8224-9c8f4f7c9431" variable="child">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" id="7fc78e2b-a532-4ca6-a850-a2e350fabc9b">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="0adc144f-252a-44b5-8740-bf9fd6dd44ad" invocationOrder="0" temporaryMapping="true" serviceId="nabu.cms.attachment.services.delete" resultName="result0af03bed9c7140ca9be1e84f5b5215fe" y="68" x="46">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="f56d2d0a-1f24-4f4e-ae2c-4745922c0eef" optional="false" mask="false" fixedValue="false">
+					<from>input/connectionId</from>
+					<to>connectionId</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="0d989258-b5b6-4631-ba62-1624dd08000d" optional="false" mask="false" fixedValue="false">
+					<from>child</from>
+					<to>attachment</to>
+				</steps>
+				<asynchronous>false</asynchronous>
+			</steps>
+		</steps>
+		<query>children</query>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" id="2285df1f-b0f2-4387-b2c0-6ec8802ec3e4">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="06c1b023-a2a0-4ed2-92ee-9ab6c0480a7e" invocationOrder="0" temporaryMapping="true" serviceId="nabu.cms.attachment.database.attachment.delete" resultName="result02b6842e9f78443ca84640fe9998ad8a" y="80" x="58">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="9fdbd78d-53eb-4abf-8cee-e83e476840c7" optional="false" mask="false" fixedValue="false">
+				<from>input/connectionId</from>
+				<to>connection</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="95a6760d-f139-4bac-bd4f-7f8a8ea398b7" optional="false" mask="false" fixedValue="false">
+				<from>input/attachment/id</from>
+				<to>parameters[0]/id</to>
+			</steps>
+			<asynchronous>false</asynchronous>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Switch" disabled="false" id="4a850061-6b3a-4a92-b98b-810674329ebb" query="input/attachment/external">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" label="false" id="2464814b-59db-4039-89f1-a0f89ff60d47">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="f5de274b-b58f-4ffa-9682-a6f8ead6c7af" invocationOrder="0" temporaryMapping="true" serviceId="nabu.frameworks.datastore.Services.delete" resultName="result08170f47cb1f4478b9c57239f1238600" y="63" x="36">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="39166158-70cc-4578-aee7-cef34d39119b" optional="false" mask="false" fixedValue="false">
+					<from>input/attachment/uri</from>
+					<to>uri</to>
+				</steps>
+				<asynchronous>false</asynchronous>
+			</steps>
+		</steps>
+	</steps>
+</sequence>

@@ -1,0 +1,8 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field minOccurs="0" name="connectionId" type="java.lang.String"/>
+        <structure collectionName="NodeAttachments" definition="nabu.cms.attachment.types.model.attachments.NodeAttachment" name="attachment" namespace="nabu.cms.attachment.types.model.attachments"/>
+    </structure>
+    <structure name="output"/>
+    <structure collectionName="NodeAttachments" definition="nabu.cms.attachment.types.model.attachments.NodeAttachment" maxOccurs="unbounded" minOccurs="0" name="children" namespace="nabu.cms.attachment.types.model.attachments"/>
+</structure>
