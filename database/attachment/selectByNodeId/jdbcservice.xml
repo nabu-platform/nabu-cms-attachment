@@ -21,5 +21,6 @@
 	owner_id,
 	node_id
 from node_attachments
-where node_id = :nodeId</sql>
+where node_id = :nodeId
+and parent_id is null</sql>
 </jdbcService>

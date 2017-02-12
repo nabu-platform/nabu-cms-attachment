@@ -1,0 +1,3 @@
+<structure name="root">
+    <structure definition="nabu.cms.attachment.types.rest.attachmentOutput" maxOccurs="unbounded" minOccurs="0" name="attachments"/>
+</structure>
