@@ -1,0 +1,3 @@
+<structure name="attachmentList">
+    <structure definition="nabu.cms.attachment.types.rest.attachmentUpdateBatch" maxOccurs="unbounded" minOccurs="0" name="attachments"/>
+</structure>

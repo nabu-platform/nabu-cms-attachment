@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<restInterface>
+    <method>PUT</method>
+    <path>/node/{nodeId}/attachment</path>
+    <role>$user</role>
+    <permissionContext>=input/path/nodeId</permissionContext>
+    <permissionAction>attachment.update</permissionAction>
+    <input>nabu.cms.attachment.types.rest.attachmentUpdateBatchList</input>
+    <configurationType>nabu.cms.attachment.configuration</configurationType>
+    <lenient>false</lenient>
+    <decamelify>false</decamelify>
+    <webApplicationId>false</webApplicationId>
+</restInterface>

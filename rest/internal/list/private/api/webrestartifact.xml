@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<restInterface>
-    <method>GET</method>
-    <path>/node/{nodeId}/attachment</path>
-    <permissionContext>=input/path/nodeId</permissionContext>
-    <permissionAction>attachment.list</permissionAction>
-    <output>nabu.cms.attachment.types.rest.attachmentList</output>
-    <configurationType>nabu.cms.attachment.configuration</configurationType>
-</restInterface>

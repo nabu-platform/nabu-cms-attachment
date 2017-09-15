@@ -1,0 +1,23 @@
+<jdbcService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sql>update node_attachments set
+	modified = :modified,
+	parent_id = :parentId,
+	type = :type,
+	sub_type = :subType,
+	size = :size,
+	width = :width,
+	height = :height,
+	name = :name,
+	title = :title,
+	description = :description,
+	uri = :uri,
+	external = :external,
+	language_id = :languageId,
+	attachment_group_id = :attachmentGroupId,
+	meta = :meta,
+	owner_id = :ownerId,
+	priority = :priority,
+	node_id = :nodeId
+ where id = :id</sql>
+	<inputDefinition>nabu.cms.attachment.types.model.attachments.NodeAttachment</inputDefinition>
+</jdbcService>

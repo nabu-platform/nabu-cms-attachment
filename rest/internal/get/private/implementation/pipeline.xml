@@ -1,7 +1,6 @@
 <structure interface="$self:api" name="pipeline">
-    <structure name="input"/>
+    <structure name="input" validate="true"/>
     <structure name="output"/>
     <structure collectionName="NodeAttachments" definition="nabu.cms.attachment.types.model.attachments.NodeAttachment" minOccurs="0" name="attachment" namespace="nabu.cms.attachments.types.model.attachments"/>
-    <field name="nodeId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
     <field minOccurs="0" name="name" type="java.lang.String"/>
 </structure>

@@ -7,6 +7,8 @@
     <permissionContext>=input/path/nodeId</permissionContext>
     <permissionAction>attachment.read</permissionAction>
     <outputAsStream>true</outputAsStream>
-    <output>nabu.cms.attachment.types.rest.attachmentOutput</output>
     <configurationType>nabu.cms.attachment.configuration</configurationType>
+    <lenient>false</lenient>
+    <decamelify>false</decamelify>
+    <webApplicationId>false</webApplicationId>
 </restInterface>

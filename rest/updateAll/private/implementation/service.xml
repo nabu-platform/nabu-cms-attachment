@@ -1,0 +1,26 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" disabled="false" id="819d022c-61bd-4334-8a07-3b66721f8c0b">
+	<steps xsi:type="be.nabu.libs.services.vm.step.For" disabled="false" id="858091df-1507-4b78-904d-e52be191f235" variable="update">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" id="192d393f-9e92-4430-9b84-676192013213">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="a94ee0a0-36a9-432e-8d78-d59339c611e2" serviceId="nabu.cms.attachment.rest.update" resultName="resultd38f4e20ae94468f861119c0133c4fb8" invocationOrder="0" temporaryMapping="true" y="40" x="59">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="5607067f-0522-49f9-a6a4-07f9c92fb2d5" fixedValue="false" mask="false" optional="false">
+					<from>input/configuration</from>
+					<to>configuration</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="e12e1f15-eec4-4e73-b845-892e93424712" fixedValue="false" mask="false" optional="false">
+					<from>input/path/nodeId</from>
+					<to>path/nodeId</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="0ea7c75a-ff3b-4a53-ab5f-b57b2c50207f" fixedValue="false" mask="false" optional="false">
+					<from>update/id</from>
+					<to>path/attachmentId</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="e48eb4a7-00da-4e67-b483-57db4c102cf0" fixedValue="false" mask="false" optional="false">
+					<from>update</from>
+					<to>content</to>
+				</steps>
+				<asynchronous>false</asynchronous>
+			</steps>
+		</steps>
+		<query>input/content/attachments</query>
+	</steps>
+</sequence>
