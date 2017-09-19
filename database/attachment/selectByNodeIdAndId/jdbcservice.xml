@@ -1,4 +1,5 @@
 <jdbcService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<outputDefinition>nabu.cms.attachment.types.model.attachments.NodeAttachment</outputDefinition>
 	<sql>select
 	id,
 	created,
@@ -18,9 +19,9 @@
 	attachment_group_id,
 	meta,
 	owner_id,
+	priority,
 	node_id
 from node_attachments
 where node_id = :nodeId
 and id = :id</sql>
-	<outputDefinition>nabu.cms.attachment.types.model.attachments.NodeAttachment</outputDefinition>
 </jdbcService>

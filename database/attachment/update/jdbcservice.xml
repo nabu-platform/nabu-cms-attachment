@@ -1,4 +1,5 @@
 <jdbcService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<inputDefinition>nabu.cms.attachment.types.model.attachments.NodeAttachment</inputDefinition>
 	<sql>update node_attachments set
 	modified = :modified,
 	parent_id = :parentId,
@@ -19,5 +20,4 @@
 	priority = :priority,
 	node_id = :nodeId
  where id = :id</sql>
-	<inputDefinition>nabu.cms.attachment.types.model.attachments.NodeAttachment</inputDefinition>
 </jdbcService>

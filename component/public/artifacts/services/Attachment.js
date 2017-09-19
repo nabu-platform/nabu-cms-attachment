@@ -1,10 +1,7 @@
 nabu.services.VueService(Vue.extend({
 	computed: {
 		maxAmount: function() {
-			var configured = ${application.configuration("nabu.cms.attachment.configuration")/configuration/maxAmountOfAttachments};
-			if (!configured) {
-				configured = 20;
-			}
+			var configured = ${when(application.configuration("nabu.cms.attachment.configuration")/maxAmountOfAttachments == null, 20, application.configuration("nabu.cms.attachment.configuration")/maxAmountOfAttachments)};
 			return configured;
 		}	
 	},
@@ -38,7 +35,7 @@ nabu.services.VueService(Vue.extend({
 		// TODO: "register" a remote url
 		// for internal and external
 		update: function(nodeId, attachments) {
-			return this.$services.swagger.execute("nabu.cms.attachment.rest.internal.updateAll", {
+			return this.$services.swagger.execute("nabu.cms.attachment.rest.updateAll", {
 				nodeId: nodeId,
 				body: {
 					attachments: attachments
@@ -46,15 +43,14 @@ nabu.services.VueService(Vue.extend({
 			});
 		},
 		delete: function(nodeId, attachmentId) {
-			return this.$services.swagger.execute("nabu.cms.attachment.rest.internal.delete", {
+			return this.$services.swagger.execute("nabu.cms.attachment.rest.delete", {
 				nodeId: nodeId,
 				attachmentId: attachmentId
 			});
 		},
 		list: function(nodeId) {
-			return this.$services.swagger.execute("nabu.cms.attachment.rest.internal.list", {
-				nodeId: nodeId,
-				attachmentId: attachmentId
+			return this.$services.swagger.execute("nabu.cms.attachment.rest.list", {
+				nodeId: nodeId
 			});
 		}
 	}

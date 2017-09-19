@@ -19,6 +19,7 @@
 	attachment_group_id,
 	meta,
 	owner_id,
+	priority,
 	node_id
 from node_attachments
 where node_id = :nodeId

@@ -19,6 +19,7 @@
 	attachment_group_id,
 	meta,
 	owner_id,
+	priority,
 	node_id
 ) values (
 	:id,
@@ -39,6 +40,7 @@
 	:attachmentGroupId,
 	:meta,
 	:ownerId,
+	:priority,
 	:nodeId
 )</sql>
 </jdbcService>
