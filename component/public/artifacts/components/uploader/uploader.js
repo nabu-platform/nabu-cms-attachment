@@ -51,15 +51,16 @@ Vue.component("n-file-uploader", {
 			this.working = true;
 			return this.$services.attachment.create(this.nodeId, this.files, this.groupId).then(function(attachments) {
 				self.working = false;
-				this.$emit("uploaded", attachments);
+				self.files.splice(0, self.files.length);
+				self.$emit("uploaded", attachments);
 			}, function() {
+				if (self.immediate) {
+					self.files.splice(0, self.files.length);
+				}
 				self.working = false;
 			});
-		}	
-	},
-	watch: {
-		files: function(newValue) {
-			console.log("files are", newValue);
+		},
+		changed: function() {
 			if (this.immediate) {
 				this.upload();
 			}

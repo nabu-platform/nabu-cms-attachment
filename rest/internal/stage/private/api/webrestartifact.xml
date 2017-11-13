@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<restInterface>
+    <method>POST</method>
+    <path>/attachment/stage</path>
+    <queryParameters>groupId, title, description, languageId, meta, priority</queryParameters>
+    <headerParameters>Content-Type, Nabu-Transfer-Encoding, Content-Disposition</headerParameters>
+    <role>$user</role>
+    <permissionAction>attachment.create</permissionAction>
+    <inputAsStream>true</inputAsStream>
+    <output>nabu.cms.attachment.types.rest.attachmentOutput</output>
+    <configurationType>nabu.cms.attachment.configuration</configurationType>
+    <lenient>false</lenient>
+    <webApplicationId>false</webApplicationId>
+    <language>false</language>
+</restInterface>

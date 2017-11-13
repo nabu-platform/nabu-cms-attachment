@@ -1,0 +1,30 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" disabled="false" id="2f71d9d7-a575-4bef-b041-b064aeb43ed4">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" id="f87fd0bc-7cc8-436c-bab8-6159dae32e93">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="eb9b9843-cb5a-462e-965b-bc9480466bd3" serviceId="nabu.cms.attachment.rest.internal.create" resultName="resultec107b02c4b04388a09bb93905fca77f" invocationOrder="1" temporaryMapping="true" y="155" x="127">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="eac30eea-93de-40c8-a609-e26c4ac51093" optional="false" fixedValue="false" mask="false">
+				<from>input/configuration</from>
+				<to>configuration</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="708021c2-58a3-491b-a452-d389ca6706d8" optional="false" fixedValue="false" mask="true">
+				<from>input/query</from>
+				<to>query</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="4634fa1d-1192-4e82-85cf-d2d38430b499" optional="false" fixedValue="false" mask="true">
+				<from>input/header</from>
+				<to>header</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="22cbf31b-64b0-4375-8eb3-419a0b122874" optional="false" fixedValue="false" mask="false">
+				<from>input/content</from>
+				<to>content</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="652dc1e7-3427-488d-b24e-f590ee85e4c9" optional="false" fixedValue="false" mask="false">
+				<from>resultd458d604856540478bf68f63857b7b77/user/id</from>
+				<to>path/nodeId</to>
+			</steps>
+			<asynchronous>false</asynchronous>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="05f80850-51bc-4ea1-b380-e4d4642e5b53" serviceId="nabu.cms.core.services.user.getCurrent" resultName="resultd458d604856540478bf68f63857b7b77" invocationOrder="0" temporaryMapping="true" y="15" x="39">
+			<asynchronous>false</asynchronous>
+		</steps>
+	</steps>
+</sequence>

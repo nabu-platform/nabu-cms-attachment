@@ -31,6 +31,9 @@ nabu.services.VueService(Vue.extend({
 				thumbnail: thumbnail ? thumbnail : null
 			}).url;
 		},
+		download: function(nodeId, attachmentId, thumbnail) {
+			window.location = this.url(nodeId, attachmentId, thumbnail);	
+		},
 		// only for external
 		// TODO: "register" a remote url
 		// for internal and external

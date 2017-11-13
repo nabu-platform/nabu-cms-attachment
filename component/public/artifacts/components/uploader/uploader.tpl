@@ -1,8 +1,9 @@
 <template id="n-file-uploader">
 	<div class="n-file-uploader">
-		<n-input-file v-model="files" :amount="maxAmount" :types="types"/>
+		<span class="n-icon n-icon-loader" v-if="working"></span>
+		<n-input-file v-if="!working" v-model="files" :amount="maxAmount" :types="types" @change="changed"/>
 		<div v-if="!immediate" class="file-actions">
-			<button v-if="!immediate" class="primary" @click="upload">%{file:Upload}</button>
+			<button :disabled="working" v-if="!immediate" class="primary" @click="upload">%{file:Upload}</button>
 		</div>
 	</div>
 </template>
