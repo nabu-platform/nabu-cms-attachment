@@ -7,7 +7,7 @@ nabu.services.VueService(Vue.extend({
 	},
 	methods: {
 		// only for internal
-		create: function(nodeId, files, groupId, title, description, languageId, meta, priority) {
+		create: function(nodeId, files, groupId, title, description, languageId, meta, priority, remove) {
 			var self = this;
 			var promises = [];
 			for (var i = 0; i < Math.min(files.length, this.maxAmount); i++) {
@@ -19,7 +19,8 @@ nabu.services.VueService(Vue.extend({
 					description : description ? description : null,
 					languageId: languageId ? languageId : null,
 					meta: meta ? meta : null,
-					priority: priority ? priority : null 
+					priority: priority ? priority : null,
+					delete: remove ? remove : null
 				}));
 			}
 			return this.$services.q.all(promises);

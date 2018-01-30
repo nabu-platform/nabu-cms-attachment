@@ -8,4 +8,5 @@
     <structure collectionName="Users" definition="nabu.cms.core.types.model.core.User" name="user" namespace="nabu.cms.core.types.model.core"/>
     <field name="contentType" type="java.lang.String"/>
     <field name="amountOfAttachments" type="java.lang.Long"/>
+    <structure collectionName="NodeAttachments" definition="nabu.cms.attachment.types.model.attachments.NodeAttachment" minOccurs="0" name="attachmentToDelete" namespace="nabu.cms.attachment.types.model.attachments"/>
 </structure>
