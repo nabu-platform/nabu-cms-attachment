@@ -5,4 +5,6 @@
     </structure>
     <structure name="output"/>
     <structure collectionName="NodeAttachments" definition="nabu.cms.attachment.types.model.attachments.NodeAttachment" maxOccurs="unbounded" minOccurs="0" name="children" namespace="nabu.cms.attachment.types.model.attachments"/>
+    <field name="totalRowCount" type="java.lang.Long"/>
+    <structure collectionName="NodeAttachments" definition="nabu.cms.attachment.types.model.attachments.NodeAttachment" minOccurs="0" name="existingAttachment" namespace="nabu.cms.attachment.types.model.attachments"/>
 </structure>

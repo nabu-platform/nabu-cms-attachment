@@ -1,6 +1,5 @@
 <structure name="responseHeader">
     <field name="contentType" type="java.lang.String"/>
-    <field name="contentLength" type="java.lang.String"/>
-    <field name="lastModified" type="java.lang.String"/>
+    <field name="contentLength" type="java.lang.Long"/>
     <field name="contentDisposition" type="java.lang.String"/>
 </structure>

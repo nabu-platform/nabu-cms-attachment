@@ -24,30 +24,88 @@
 		<steps xsi:type="be.nabu.libs.services.vm.step.Throw" disabled="false" label="contentType !~ &quot;.*/.*&quot;" id="87de971a-c225-4f68-8a74-f1d39b55d0e7" message="=&quot;Invalid content type: &quot; + contentType" xsi:nil="true"/>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Throw" disabled="false" label="input/configuration/allowedContentTypes != null &amp;&amp; contentType !# input/configuration/allowedContentTypes" id="e7e3a597-a52c-4648-a02d-ca3589ef6bd0" message="=&quot;Content type not allowed: &quot; + contentType" xsi:nil="true"/>
 	</steps>
-	<steps xsi:type="be.nabu.libs.services.vm.step.Switch" disabled="false" id="27a94028-cf92-4f6a-9d46-4b30fdbb8935">
-		<steps xsi:type="be.nabu.libs.services.vm.step.Sequence" disabled="false" label="input/configuration/maxAmountOfAttachments != null" id="1623c81f-9452-40d6-9759-332580c809f7">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" id="0a48549c-f2d6-43d5-8125-e753fc379bcb">
-				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="70b6caba-9cde-44e8-9c42-050c4b754175" invocationOrder="0" temporaryMapping="true" serviceId="nabu.cms.attachment.database.attachment.selectByNodeId" resultName="resultd921a64cb51843b2988cd649018622ce" y="68" x="28">
-					<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="c8363530-4380-4a7c-9fdd-eb4fcf6fedac" mask="false" fixedValue="false" optional="false">
-						<from>input/configuration/connectionId</from>
-						<to>connection</to>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Sequence" disabled="false" label="input/query/groupId != null" id="c57f62d2-2976-4438-80e0-d99485ab392b">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" comment="Get master data entry" id="f32b290b-3513-4040-a796-2cd59cbdd867">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="64825c4e-0070-4f8e-9f8b-d294f509c652" invocationOrder="0" temporaryMapping="true" serviceId="nabu.cms.core.database.masterdata.entry.selectById" resultName="result9f590f15facb468399b8974d1e0f51b3" y="107" x="31">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="a19d9bbd-2fae-4a8b-86e1-e220103ba0bc" mask="false" fixedValue="false" optional="false">
+					<from>input/configuration/connectionId</from>
+					<to>connection</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="5139dce4-64c7-463e-9786-893698119e59" mask="false" fixedValue="false" optional="false">
+					<from>input/query/groupId</from>
+					<to>parameters/id</to>
+				</steps>
+				<asynchronous>false</asynchronous>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="34028f9f-a271-4250-9e64-b7788fcef80e" mask="false" fixedValue="false" optional="false">
+				<from>result9f590f15facb468399b8974d1e0f51b3/results[0]</from>
+				<to>group</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" comment="Get group" id="988df074-b498-4190-9722-64505a317247">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="13487c7f-7231-4168-8e2c-cbc0c9fa6cd1" mask="false" fixedValue="false" optional="false">
+				<from>input/configuration/groups[name = /group/name]</from>
+				<to>groupConfiguration</to>
+			</steps>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Sequence" disabled="false" label="input/configuration/maxAmountOfAttachments != null || groupConfiguration/maxAmountOfAttachments != null" id="1623c81f-9452-40d6-9759-332580c809f7">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" id="0a48549c-f2d6-43d5-8125-e753fc379bcb">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="70b6caba-9cde-44e8-9c42-050c4b754175" invocationOrder="0" temporaryMapping="true" serviceId="nabu.cms.attachment.database.attachment.selectByNodeId" resultName="resultd921a64cb51843b2988cd649018622ce" y="68" x="28">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="c8363530-4380-4a7c-9fdd-eb4fcf6fedac" mask="false" fixedValue="false" optional="false">
+					<from>input/configuration/connectionId</from>
+					<to>connection</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="d968db77-6011-4d26-805d-895fd4285825" mask="false" fixedValue="false" optional="false">
+					<from>input/path/nodeId</from>
+					<to>parameters/nodeId</to>
+				</steps>
+				<asynchronous>false</asynchronous>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="f39e275f-d047-4e3c-885e-bb475c4b61b0" mask="false" fixedValue="false" optional="false">
+				<from>resultd921a64cb51843b2988cd649018622ce/rowCount</from>
+				<to>amountOfAttachments</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="e73b6154-3307-4723-bfaa-b5bcce6ff5c2" mask="false" fixedValue="false" optional="false">
+				<from>resultd921a64cb51843b2988cd649018622ce/results[attachmentGroupId = /group/id]</from>
+				<to>existingAttachments</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Throw" disabled="false" label="input/configuration/maxAmountOfAttachments != null &amp;&amp; amountOfAttachments &gt;= input/configuration/maxAmountOfAttachments" id="e10accd3-8238-4a77-8b56-5254c4ef2abb" message="=&quot;Attachment limit reached for: &quot; + input/path/nodeId">
+			<code>CMS-ATTACHMENT-1</code>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" comment="Get amount of attachments in group" id="3996560f-62d2-40e5-91a9-37ac17b05e3d">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="bd3a9758-08be-482d-ab31-35d9ed638722" invocationOrder="0" temporaryMapping="true" serviceId="nabu.utils.List.size" resultName="resultbecb77ee58dc4340b81a2c67e4658d39" y="135" x="157">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="3429a165-bc00-48f1-82a8-ea03a4bc7937" mask="false" fixedValue="false" optional="false">
+					<from>existingAttachments</from>
+					<to>list</to>
+				</steps>
+				<asynchronous>false</asynchronous>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="050dddf2-9619-442b-971f-02e24c8c8ac9" mask="false" fixedValue="false" optional="false">
+				<from>resultbecb77ee58dc4340b81a2c67e4658d39/size</from>
+				<to>amountOfAttachmentsInGroup</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Switch" disabled="false" label="groupConfiguration/maxAmountOfAttachments != null &amp;&amp; amountOfAttachmentsInGroup &gt;= groupConfiguration/maxAmountOfAttachments" id="2913aed3-6ee5-4e82-8cce-f060ad7f5df8" query="groupConfiguration/autodelete">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" label="true" comment="Add attachments for delete" id="01cacc60-d52e-4700-a5cf-b814f36165d6">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="0ff2df79-e8f1-4a79-a079-ef05a3930f41" invocationOrder="0" temporaryMapping="true" serviceId="nabu.utils.List.addAll" resultName="result11f2058bdb78443ba82c172cc798f690" y="123" x="129">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="0902c7db-4563-4823-a29a-d3f49bb950e9" mask="false" fixedValue="false" optional="false">
+						<from>existingAttachments/id</from>
+						<to>objects</to>
 					</steps>
-					<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="d968db77-6011-4d26-805d-895fd4285825" mask="false" fixedValue="false" optional="false">
-						<from>input/path/nodeId</from>
-						<to>parameters/nodeId</to>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="f555eed0-b985-4d88-8360-3907b846a2ed" mask="false" fixedValue="false" optional="false">
+						<from>input/query/delete</from>
+						<to>list</to>
 					</steps>
 					<asynchronous>false</asynchronous>
 				</steps>
-				<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="f39e275f-d047-4e3c-885e-bb475c4b61b0" mask="false" fixedValue="false" optional="false">
-					<from>resultd921a64cb51843b2988cd649018622ce/rowCount</from>
-					<to>amountOfAttachments</to>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="a3def335-71f7-4887-b2ff-18197bf997b8" mask="false" fixedValue="false" optional="false">
+					<from>result11f2058bdb78443ba82c172cc798f690/list</from>
+					<to>input/query/delete</to>
 				</steps>
 			</steps>
-			<steps xsi:type="be.nabu.libs.services.vm.step.Switch" disabled="false" id="845ff46d-758f-4e7b-8088-68f4ddc51a9a">
-				<steps xsi:type="be.nabu.libs.services.vm.step.Throw" disabled="false" label="amountOfAttachments &gt;= input/configuration/maxAmountOfAttachments" id="e10accd3-8238-4a77-8b56-5254c4ef2abb" message="=&quot;Attachment limit reached for: &quot; + input/path/nodeId">
-					<code>CMS-ATTACHMENT-1</code>
-				</steps>
-			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Throw" disabled="false" id="02a77fbb-aee9-49f2-8e96-2e1fec0268f8" message="=&quot;Group attachment limit reached for: &quot; + input/path/nodeId" xsi:nil="true"/>
 		</steps>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" id="11e4bd48-abbb-493e-af01-221fd5d9d912">
@@ -57,7 +115,7 @@
 				<to>connectionId</to>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="c5de9bb4-a4d7-47dd-9061-caa68cd16f0b" mask="false" fixedValue="true" optional="false">
-				<from>true</from>
+				<from>false</from>
 				<to>mustExist</to>
 			</steps>
 			<asynchronous>false</asynchronous>

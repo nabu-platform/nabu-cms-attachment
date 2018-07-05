@@ -21,7 +21,7 @@
 	a.owner_id,
 	a.priority,
 	a.node_id
-from node_attachments a join master_data_entries m on a.attachment_group_id = m.id
+from ~node_attachments a join ~master_data_entries m on a.attachment_group_id = m.id
 where a.parent_id = :parentId
 and m.name = :attachmentGroup </sql>
 </jdbcService>

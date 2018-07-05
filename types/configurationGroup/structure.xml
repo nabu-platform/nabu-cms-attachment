@@ -1,0 +1,5 @@
+<structure name="root">
+    <field name="name" type="java.lang.String"/>
+    <field minOccurs="0" name="maxAmountOfAttachments" type="java.lang.Integer"/>
+    <field minOccurs="0" name="autodelete" type="java.lang.Boolean"/>
+</structure>

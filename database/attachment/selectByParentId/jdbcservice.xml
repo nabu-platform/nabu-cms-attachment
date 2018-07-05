@@ -21,6 +21,6 @@
 	owner_id,
 	priority,
 	node_id
-from node_attachments
+from ~node_attachments
 where parent_id = :parentId</sql>
 </jdbcService>

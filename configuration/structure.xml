@@ -8,4 +8,5 @@
         <field minOccurs="0" name="width" type="java.lang.Integer"/>
         <field minOccurs="0" name="height" type="java.lang.Integer"/>
     </structure>
+    <structure definition="nabu.cms.attachment.types.configurationGroup" maxOccurs="unbounded" minOccurs="0" name="groups"/>
 </structure>

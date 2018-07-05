@@ -9,4 +9,8 @@
     <field name="contentType" type="java.lang.String"/>
     <field name="amountOfAttachments" type="java.lang.Long"/>
     <structure collectionName="NodeAttachments" definition="nabu.cms.attachment.types.model.attachments.NodeAttachment" minOccurs="0" name="attachmentToDelete" namespace="nabu.cms.attachment.types.model.attachments"/>
+    <structure collectionName="MasterDataEntries" definition="nabu.cms.core.types.model.core.MasterDataEntry" name="group" namespace="nabu.cms.core.types.model.core"/>
+    <structure collectionName="NodeAttachments" definition="nabu.cms.attachment.types.model.attachments.NodeAttachment" maxOccurs="unbounded" minOccurs="0" name="existingAttachments" namespace="nabu.cms.attachment.types.model.attachments"/>
+    <field minOccurs="0" name="amountOfAttachmentsInGroup" type="java.lang.Integer"/>
+    <structure definition="nabu.cms.attachment.types.configurationGroup" name="groupConfiguration"/>
 </structure>

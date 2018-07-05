@@ -22,6 +22,5 @@
 	priority,
 	node_id
 from ~node_attachments
-where node_id = :nodeId
-and id = :id</sql>
+where uri = :uri</sql>
 </jdbcService>
