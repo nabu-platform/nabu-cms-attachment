@@ -1,6 +1,6 @@
 <sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" disabled="false" id="44fa22d5-ced0-4444-b898-5a35572d23ec">
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" id="86a7fa8a-f54b-402a-8f22-123cd1be8530">
-		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="371da48a-4165-4b3a-a2b7-6bf80175db23" invocationOrder="0" temporaryMapping="true" serviceId="nabu.cms.attachment.database.attachment.selectByNodeIdAndId" resultName="result182762f5efba48fc98b2f916e9b687ca" y="138" x="357">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="371da48a-4165-4b3a-a2b7-6bf80175db23" serviceId="nabu.cms.attachment.database.attachment.selectByNodeIdAndId" resultName="result182762f5efba48fc98b2f916e9b687ca" invocationOrder="0" temporaryMapping="true" y="138" x="357">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="768bd73c-d881-48e4-ada4-3a180194804c" fixedValue="false" optional="false" mask="false">
 				<from>input/configuration/connectionId</from>
 				<to>connection</to>
@@ -22,7 +22,7 @@
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Switch" disabled="false" id="9dcb0921-04af-440a-ad06-119f35b134a6">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" label="input/query/thumbnail != null" id="571c1f35-c5b6-4353-93d2-0ee5dbf12472">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="90479617-0c68-404b-b0f1-121da24436db" invocationOrder="0" temporaryMapping="true" serviceId="nabu.cms.attachment.services.thumbnail" resultName="result5cf3218de5c542a5920f7a7fce569e67" y="68" x="15">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="90479617-0c68-404b-b0f1-121da24436db" serviceId="nabu.cms.attachment.services.thumbnail" resultName="result5cf3218de5c542a5920f7a7fce569e67" invocationOrder="0" temporaryMapping="true" y="68" x="15">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="061572d4-6365-4310-80f1-6dcd05f19306" fixedValue="false" optional="false" mask="false">
 					<from>attachment</from>
 					<to>original</to>
@@ -47,14 +47,14 @@
 		<steps xsi:type="be.nabu.libs.services.vm.step.Throw" disabled="false" label="attachment == null" id="08583909-c5bb-4b7f-b139-2a078a3a4bed" message="=&quot;Invalid attachment: &quot; + input/path/attachmentId" xsi:nil="true"/>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map" disabled="false" comment="Map output" id="80611d47-f6ca-4c18-b2b9-d8177752730d">
-		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="25b1e51c-ecd4-41d9-a7be-2af685346e60" invocationOrder="0" temporaryMapping="true" serviceId="nabu.frameworks.datastore.Services.retrieve" resultName="result38ad7bd5850a43cb8962c1ed17879b60" y="210" x="60">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="25b1e51c-ecd4-41d9-a7be-2af685346e60" serviceId="nabu.frameworks.datastore.Services.retrieve" resultName="result38ad7bd5850a43cb8962c1ed17879b60" invocationOrder="0" temporaryMapping="true" y="210" x="60">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="6084a426-422e-4598-bfcc-3cf0ac134338" fixedValue="false" optional="false" mask="false">
 				<from>attachment/uri</from>
 				<to>uri</to>
 			</steps>
 			<asynchronous>false</asynchronous>
 		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="833f7d2b-00e0-4d8a-b62c-1bf41f17506b" invocationOrder="0" temporaryMapping="true" serviceId="nabu.frameworks.datastore.Services.properties" resultName="result5f4e5a9f19e543108102c8cb706084b1" y="88" x="53">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke" disabled="false" id="833f7d2b-00e0-4d8a-b62c-1bf41f17506b" serviceId="nabu.frameworks.datastore.Services.properties" resultName="result5f4e5a9f19e543108102c8cb706084b1" invocationOrder="0" temporaryMapping="true" y="88" x="53">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link" disabled="false" id="9876759d-ba15-41cf-bb06-025d98cdff86" fixedValue="false" optional="false" mask="false">
 				<from>attachment/uri</from>
 				<to>uri</to>
