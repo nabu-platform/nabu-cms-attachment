@@ -24,6 +24,14 @@ window.addEventListener("load", function() {
 					return new nabu.cms.views.AttachmentUploader({propsData: parameters});
 				}
 			});
+			
+			$services.router.register({
+				alias: "page-attachment-viewer",
+				enter: function(parameters) {
+					return new nabu.cms.views.AttachmentViewer({propsData: parameters});
+				},
+				query: ["nodeId", "attachmentGroupId", "attachmentId", "height", "width", "size", "randomize", "placeholder"]
+			});
 		}
 		
 		// ------------------------------- SERVICES

@@ -9,5 +9,5 @@
 			<n-form-text v-model="field.types[i]"/>
 			<button class="danger" @click="field.types.splice(i, 1)"><span class="fa fa-times"></span></button>
 		</n-form-section>
-	</n-form-section>	
+	</n-form-section>
 </template>
