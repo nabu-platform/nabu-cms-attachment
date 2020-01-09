@@ -26,11 +26,16 @@ nabu.services.VueService(Vue.extend({
 			return this.$services.q.all(promises);
 		},
 		url: function(nodeId, attachmentId, thumbnail) {
-			return this.$services.swagger.parameters("nabu.cms.attachment.rest.internal.get", {
+			var parameters = this.$services.swagger.parameters("nabu.cms.attachment.rest.internal.get", {
 				nodeId: nodeId,
 				attachmentId: attachmentId,
 				thumbnail: thumbnail ? thumbnail : null
-			}).url;
+			});
+			var url = parameters.url;
+			if (${environment("mobile") == true}) {
+				url = "${environment('url')}" + url;
+			}
+			return url;
 		},
 		download: function(nodeId, attachmentId, thumbnail) {
 			window.location = this.url(nodeId, attachmentId, thumbnail);	

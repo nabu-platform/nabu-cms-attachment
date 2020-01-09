@@ -1,4 +1,4 @@
-<structure name="attachment">
+<structure comment="Configuration for Nabu CMS attachments" name="attachment">
     <field minOccurs="0" name="connectionId" type="java.lang.String"/>
     <field minOccurs="0" name="datastoreContext" type="java.lang.String"/>
     <field maxOccurs="unbounded" minOccurs="0" name="allowedContentTypes" type="java.lang.String"/>
