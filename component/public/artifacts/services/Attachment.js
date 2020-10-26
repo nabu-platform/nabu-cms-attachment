@@ -25,11 +25,13 @@ nabu.services.VueService(Vue.extend({
 			}
 			return this.$services.q.all(promises);
 		},
-		url: function(nodeId, attachmentId, thumbnail) {
+		url: function(nodeId, attachmentId, thumbnail, as, secret) {
 			var parameters = this.$services.swagger.parameters("nabu.cms.attachment.rest.internal.get", {
 				nodeId: nodeId,
 				attachmentId: attachmentId,
-				thumbnail: thumbnail ? thumbnail : null
+				thumbnail: thumbnail ? thumbnail : null,
+				as: as,
+				code: secret
 			});
 			var url = parameters.url;
 			if (${environment("mobile") == true}) {
@@ -38,7 +40,17 @@ nabu.services.VueService(Vue.extend({
 			return url;
 		},
 		download: function(nodeId, attachmentId, thumbnail) {
-			window.location = this.url(nodeId, attachmentId, thumbnail);	
+			// if we are using bearer tokens, we presumably have a stateless connection
+			// downloads at that point are anonymous though as we don't get the "automatic" authentication from cookies
+			// to solve that, we use one time use tokens
+			if (this.$services.swagger.bearer) {
+				this.$services.swagger.execute("nabu.cms.core.rest.user.temporaryAuthentication").then(function(x) {
+					window.location = this.url(nodeId, attachmentId, thumbnail, x ? x.id : null, x ? x.secret : null);
+				});
+			}
+			else {
+				window.location = this.url(nodeId, attachmentId, thumbnail);
+			}
 		},
 		// only for external
 		// TODO: "register" a remote url

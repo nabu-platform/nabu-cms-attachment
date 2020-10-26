@@ -61,6 +61,14 @@ nabu.cms.views.AttachmentViewer = Vue.extend({
 			this.load(function() {});
 		}	
 	},
+	computed: {
+		availableThumbnails: function() {
+${{
+thumbnails = nabu.web.application.Services.configuration(environment("webApplicationId"), "nabu.cms.attachment.configuration")/configuration/thumbnails
+echo("return " + when(size(thumbnails) > 0, json.stringify(thumbnails), "[]") + ";")
+}}
+		}	
+	},
 	activate: function(done) {
 		if (this.cell.state.refreshOn) {
 			var self = this;

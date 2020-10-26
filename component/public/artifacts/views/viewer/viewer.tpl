@@ -11,10 +11,11 @@
 							:filter="getRefreshEvents"/>
 						<button @click="cell.state.refreshOn.splice(i, 1)"><span class="fa fa-trash"></span></button>
 					</div>
+					<n-form-combo v-model="cell.state.thumbnail" :items="availableThumbnails" label="Thumbnail" :formatter="function(x) { return x.name }" :extracter="function(x) { return x.name }"/>
 				</n-collapsible>
 			</n-form>
 		</n-sidebar>
 		<div class='attachment-image' v-if="resolvedAttachmentId || placeholder"
-			:style="{'background-image': 'url(' + (resolvedAttachmentId ? $services.attachment.url(nodeId, resolvedAttachmentId) : '${server.root()}' + placeholder) + ')', 'height': height ? height : 'inherit', 'width': width ? width : 'inherit', 'background-size': size}"/>
+			:style="{'background-image': 'url(' + (resolvedAttachmentId ? $services.attachment.url(nodeId, resolvedAttachmentId, cell.state.thumbnail) : '${server.root()}' + placeholder) + ')', 'height': height ? height : 'inherit', 'width': width ? width : 'inherit', 'background-size': size}"/>
 	</div>
 </template>

@@ -2,7 +2,7 @@
 <restInterface>
     <method>GET</method>
     <path>/node/{nodeId}/attachment/{attachmentId}</path>
-    <queryParameters>thumbnail</queryParameters>
+    <queryParameters>thumbnail, as, code</queryParameters>
     <responseHeaders>Content-Type, Content-Length, Content-Disposition</responseHeaders>
     <permissionContext>=input/path/nodeId</permissionContext>
     <permissionAction>attachment.read</permissionAction>
@@ -16,4 +16,12 @@
     <cache>true</cache>
     <allowCookiesWithoutReferer>true</allowCookiesWithoutReferer>
     <allowCookiesWithExternalReferer>false</allowCookiesWithExternalReferer>
+    <request>false</request>
+    <allowHeaderAsQueryParameter>false</allowHeaderAsQueryParameter>
+    <useServerCache>false</useServerCache>
+    <source>false</source>
+    <allowRaw>false</allowRaw>
+    <domain>false</domain>
+    <temporaryAlias>=input/query/as</temporaryAlias>
+    <temporarySecret>=input/query/code</temporarySecret>
 </restInterface>

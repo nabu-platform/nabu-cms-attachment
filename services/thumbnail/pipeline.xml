@@ -1,6 +1,6 @@
 <structure name="pipeline">
     <structure name="input">
-        <structure definition="nabu.cms.attachment.configuration" name="configuration"/>
+        <structure comment="Configuration for Nabu CMS attachments" definition="nabu.cms.attachment.configuration" name="configuration"/>
         <structure collectionName="NodeAttachments" definition="nabu.cms.attachment.types.model.attachments.NodeAttachment" name="original" namespace="nabu.cms.attachments.types.model.attachments"/>
         <field name="name" type="java.lang.String"/>
     </structure>
