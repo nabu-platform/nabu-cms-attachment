@@ -20,6 +20,10 @@ nabu.cms.views.AttachmentUploader = Vue.extend({
 		edit: {
 			type: Boolean,
 			required: true
+		},
+		disabled: {
+			type: Boolean,
+			required: false
 		}
 	},
 	created: function() {
