@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-08-09T14:53:54.212+02:00" lastModified="2022-08-09T16:17:39.157+02:00" leaf="true" version="15">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.frameworks.datastore.Services.retrieve</references>
+    <references>nabu.utils.Uri.fromComponents</references>
+    <references>java.util.UUID</references>
+    <references>nabu.cms.attachment.types.inlineAttachment</references>
+    <references>nabu.web.application.Services.fragment</references>
+    <references>nabu.web.application.types.WebFragmentInformation</references>
+    <references>nabu.utils.String.join</references>
+    <references>nabu.web.application.Services.information</references>
+    <references>nabu.utils.String.replace</references>
+    <references>nabu.cms.attachment.crud.nodeAttachment.types.output</references>
+    <references>java.lang.String</references>
+    <references>nabu.web.application.types.WebApplicationInformation</references>
+    <references>nabu.cms.attachment.crud.nodeAttachment.services.list</references>
+</node>

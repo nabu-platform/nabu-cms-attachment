@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.crud.CRUDArtifactManager" created="2022-08-09T14:33:37.724+02:00" lastModified="2022-08-09T14:34:44.817+02:00" leaf="false" version="6">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.cms.attachment.types.model.attachments.NodeAttachment</references>
+    <references>nabu.cms.core.providers.crud.related.provider</references>
+</node>

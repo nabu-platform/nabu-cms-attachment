@@ -1,0 +1,9 @@
+<structure name="inlineAttachment">
+    <field comment="When reading attachments, this might not be filled in and instead we use the contentURI to avoid base64 overhead.&#10;&#10;Additionally we can also use this structure to update for instance an image gallery.&#10;Imagine an image gallery with 10 images and you want to remove 1 and add 1.&#10;Imagine 1 mb per image.&#10;&#10;If we stream the content as bytes, we get 10mb with 33% overhead of base64 on the GET.&#10;It does not matter if our image gallery only shows 3 images at a time.&#10;&#10;When we remove an attachment and add a new one, the upload service will likely just serialize all the data it has (including the bytes).&#10;This means, we upload 10mb with again 33% base64 overhead.&#10;&#10;Instead we assume (as we do in most places) that attachment content can NOT be updated.&#10;Instead of streaming the bytes on GET, we stream a calculated URL which the gallery can embed.&#10;(On the plus side, this is also compliant with how external attachments work)&#10;&#10;That means on GET, we stream almost no content (no byte content, no base64 overhead)&#10;On update, we push an array of 10 items, 9 of which only have an URI without content, and only one has a content.&#10;&#10;&#10;" minOccurs="0" name="content" type="[B"/>
+    <field minOccurs="0" name="contentUri" type="java.net.URI"/>
+    <field minOccurs="0" name="contentName" type="java.lang.String"/>
+    <field minOccurs="0" name="contentType" type="java.lang.String"/>
+    <field minOccurs="0" name="attachmentId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field minOccurs="0" name="attachmentGroupId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field minOccurs="0" name="priority" type="java.lang.Long"/>
+</structure>

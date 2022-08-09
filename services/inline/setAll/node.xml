@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-08-09T14:53:59.032+02:00" lastModified="2022-08-09T16:26:39.051+02:00" leaf="true" version="22">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.utils.List.removeAll</references>
+    <references>nabu.frameworks.datastore.Services.store</references>
+    <references>nabu.services.jdbc.Services.delete</references>
+    <references>nabu.cms.attachment.crud.nodeAttachment.services.create</references>
+    <references>nabu.cms.attachment.crud.nodeAttachment.types.output</references>
+    <references>nabu.utils.Date.now</references>
+    <references>java.util.UUID</references>
+    <references>java.lang.String</references>
+    <references>nabu.cms.attachment.types.inlineAttachment</references>
+    <references>nabu.cms.attachment.crud.nodeAttachment.services.list</references>
+    <references>nabu.utils.String.split</references>
+</node>
