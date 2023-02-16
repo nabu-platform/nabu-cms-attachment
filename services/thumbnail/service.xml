@@ -479,6 +479,15 @@
 						<from>attachmentGroup</from>
 						<to>category</to>
 					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="c661d586-f462-4cfb-918c-2f877a1a84be"
+							mask="false"
+							optional="false"
+							fixedValue="true">
+						<from>true</from>
+						<to>system</to>
+					</steps>
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"

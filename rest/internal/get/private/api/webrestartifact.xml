@@ -4,12 +4,15 @@
     <path>/node/{nodeId}/attachment/{attachmentId}</path>
     <queryParameters>thumbnail, as, code</queryParameters>
     <responseHeaders>Content-Type, Content-Length, Content-Disposition</responseHeaders>
-    <permissionContext>=input/path/nodeId</permissionContext>
     <permissionAction>attachment.read</permissionAction>
+    <permissionContext>=input/path/nodeId</permissionContext>
+    <useServiceContextAsPermissionContext>false</useServiceContextAsPermissionContext>
+    <useWebApplicationAsPermissionContext>false</useWebApplicationAsPermissionContext>
     <outputAsStream>true</outputAsStream>
     <configurationType>nabu.cms.attachment.configuration</configurationType>
     <lenient>false</lenient>
     <webApplicationId>false</webApplicationId>
+    <geoPosition>false</geoPosition>
     <language>false</language>
     <allowFormBinding>false</allowFormBinding>
     <caseInsensitive>false</caseInsensitive>
@@ -24,4 +27,9 @@
     <domain>false</domain>
     <temporaryAlias>=input/query/as</temporaryAlias>
     <temporarySecret>=input/query/code</temporarySecret>
+    <temporaryCorrelationId>=input/path/attachmentId</temporaryCorrelationId>
+    <ignoreOffline>false</ignoreOffline>
+    <allowRootArrays>false</allowRootArrays>
+    <captureErrors>false</captureErrors>
+    <captureSuccessful>false</captureSuccessful>
 </restInterface>

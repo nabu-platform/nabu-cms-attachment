@@ -1,10 +1,12 @@
 <sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		disabled="false"
-		id="8ff21466-476f-41c6-8b0d-f6738e35efa6">
+		id="8ff21466-476f-41c6-8b0d-f6738e35efa6"
+		lineNumber="1">
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			comment="Attachments are immutable so no need to check"
 			disabled="false"
-			id="b6910291-5361-49ac-af78-c755d4a6b3f5">
+			id="b6910291-5361-49ac-af78-c755d4a6b3f5"
+			lineNumber="2">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 				disabled="false"
 				id="5dd97f8c-283f-4337-a380-451c44d75e74"

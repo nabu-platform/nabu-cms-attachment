@@ -1,4 +1,4 @@
-<structure interface="$self:implementation" name="pipeline">
+<structure interface="nabu.cms.attachment.rest.internal.get:implementation" name="pipeline">
     <structure name="input"/>
     <structure name="output"/>
 </structure>

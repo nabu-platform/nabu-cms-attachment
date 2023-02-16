@@ -1,1 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2018-05-18T16:18:08.642+02:00" lastModified="2020-01-09T16:23:06.967+01:00" leaf="true" version="57"><environmentId>apollo</environmentId><hidden>false</hidden><properties/><references>nabu.cms.attachment.configuration</references><references>nabu.frameworks.datastore.Services.retrieve</references><references>nabu.frameworks.datastore.Services.properties</references><references>java.util.Date</references><references>nabu.cms.attachment.types.model.attachments.NodeAttachment</references><references>java.lang.Integer</references><references>nabu.cms.attachment.services.thumbnail</references><references>java.lang.Long</references><references>java.lang.Boolean</references><references>java.lang.String</references><references>nabu.cms.attachment.database.attachment.selectByNodeIdAndId</references><references>java.io.InputStream</references></node>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2018-05-18T16:18:08.642+02:00" lastModified="2022-09-22T15:25:23.160+02:00" leaf="true" version="58">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.cms.attachment.configuration</references>
+    <references>nabu.frameworks.datastore.Services.retrieve</references>
+    <references>nabu.frameworks.datastore.Services.properties</references>
+    <references>java.util.Date</references>
+    <references>nabu.cms.attachment.types.model.attachments.NodeAttachment</references>
+    <references>java.lang.Integer</references>
+    <references>nabu.cms.attachment.services.thumbnail</references>
+    <references>java.lang.Long</references>
+    <references>java.lang.Boolean</references>
+    <references>java.lang.String</references>
+    <references>nabu.cms.attachment.database.attachment.selectByNodeIdAndId</references>
+    <references>java.io.InputStream</references>
+</node>
