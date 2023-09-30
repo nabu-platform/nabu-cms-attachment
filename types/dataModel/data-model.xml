@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataModel>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.cms.attachment.types.model.attachments.NodeAttachment</type>
+        <x>269</x>
+        <y>238</y>
+    </entries>
+</dataModel>
