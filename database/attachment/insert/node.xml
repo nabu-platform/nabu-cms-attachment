@@ -1,1 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><node artifactManager="be.nabu.eai.module.services.jdbc.JDBCServiceManager" lastModified="2018-03-15T15:49:36.891+01:00" leaf="true" version="7"><environmentId>hyperion</environmentId><hidden>false</hidden><properties/><references>java.lang.String</references><references>java.lang.Long</references><references>java.lang.Integer</references><references>java.lang.Boolean</references><references>nabu.cms.attachment.types.model.attachments.NodeAttachment</references><references>be.nabu.libs.types.api.KeyValuePair</references><references>java.lang.Long</references><references>java.lang.Boolean</references></node>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.jdbc.JDBCServiceManager" deprecated="2023-09-30T15:52:53.476+02:00" lastModified="2018-03-15T15:49:36.891+01:00" leaf="true" version="7">
+    <environmentId>hyperion</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>java.lang.String</references>
+    <references>java.lang.Long</references>
+    <references>java.lang.Integer</references>
+    <references>java.lang.Boolean</references>
+    <references>nabu.cms.attachment.types.model.attachments.NodeAttachment</references>
+    <references>be.nabu.libs.types.api.KeyValuePair</references>
+    <references>java.lang.Long</references>
+    <references>java.lang.Boolean</references>
+</node>

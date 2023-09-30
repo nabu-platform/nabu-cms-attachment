@@ -1,1 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><node artifactManager="be.nabu.eai.module.types.structure.StructureManager" lastModified="2017-09-19T08:03:13.994+02:00" leaf="true" version="7"><environmentId>hyperion</environmentId><properties/><references>java.util.UUID</references><references>java.util.Date</references><references>java.lang.String</references><references>java.lang.Long</references><references>java.lang.Integer</references><references>java.lang.Boolean</references></node>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.types.structure.StructureManager" created="2023-09-30T17:03:13.957+02:00" lastModified="2023-09-30T17:03:20.267+02:00" leaf="true" version="9">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>java.util.UUID</references>
+    <references>java.util.Date</references>
+    <references>java.lang.String</references>
+    <references>java.lang.Long</references>
+    <references>java.lang.Integer</references>
+    <references>java.lang.Boolean</references>
+    <references>nabu.cms.attachments.types.model.attachments.AttachmentGroup</references>
+    <references>nabu.cms.core.types.model.core.MasterDataEntry</references>
+    <references>java.net.URI</references>
+</node>

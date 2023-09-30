@@ -16,6 +16,7 @@
     </structure>
     <structure name="output">
         <structure definition="nabu.cms.attachment.types.rest.attachmentOutput" name="attachment"/>
+        <structure collectionName="NodeAttachments" definition="nabu.cms.attachment.types.model.attachments.NodeAttachment" name="raw" namespace="nabu.cms.attachments.types.model.attachments"/>
     </structure>
     <structure collectionName="NodeAttachments" definition="nabu.cms.attachment.types.model.attachments.NodeAttachment" name="attachment" namespace="nabu.cms.attachments.types.model.attachments"/>
 </structure>
