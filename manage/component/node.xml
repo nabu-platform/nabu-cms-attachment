@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.web.component.WebComponentManager" created="2023-09-30T15:46:05.005+02:00" lastModified="2023-10-26T15:13:31.502+02:00" leaf="true" version="8">
+<node artifactManager="be.nabu.eai.module.web.component.WebComponentManager" created="2023-10-26T14:37:54.596+02:00" lastModified="2023-10-26T14:41:32.571+02:00" leaf="true" version="5">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
     <properties/>
     <references>nabu.cms.attachment.rest.list</references>
+    <references>nabu.cms.attachment.manage.rest.update</references>
     <references>nabu.cms.attachment.rest.internal.create</references>
     <references>nabu.cms.attachment.rest.internal.get</references>
     <references>nabu.cms.attachment.rest.delete</references>
-    <references>nabu.cms.attachment.rest.account.update</references>
 </node>

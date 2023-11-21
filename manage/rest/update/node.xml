@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2023-10-13T10:17:07.312+02:00" lastModified="2023-10-26T14:39:24.582+02:00" leaf="true" version="31">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.frameworks.datastore.Services.store</references>
+    <references>nabu.cms.attachment.services.createAttachment</references>
+    <references>nabu.cms.core.crud.account.services.get</references>
+    <references>nabu.cms.attachment.services.getUrl</references>
+    <references>nabu.utils.reflection.Type.set</references>
+    <references>nabu.services.jdbc.Services.delete</references>
+    <references>nabu.services.jdbc.Services.update</references>
+    <references>nabu.cms.attachment.types.rest.attachmentOutput</references>
+    <references>nabu.cms.attachment.crud.nodeAttachment.types.output</references>
+    <references>nabu.utils.Object.first</references>
+    <references>nabu.cms.core.crud.account.types.output</references>
+    <references>java.lang.String</references>
+    <references>java.net.URI</references>
+    <references>nabu.cms.attachment.crud.nodeAttachment.services.list</references>
+    <references>java.io.InputStream</references>
+    <references>nabu.cms.attachment.services.getAttachmentGroup</references>
+</node>

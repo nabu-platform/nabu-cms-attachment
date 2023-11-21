@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <webModule>
     <webFragments>nabu.cms.attachment.rest.list</webFragments>
+    <webFragments>nabu.cms.attachment.manage.rest.update</webFragments>
     <webFragments>nabu.cms.attachment.rest.internal.create</webFragments>
     <webFragments>nabu.cms.attachment.rest.internal.get</webFragments>
     <webFragments>nabu.cms.attachment.rest.delete</webFragments>
-    <webFragments>nabu.cms.attachment.rest.account.update</webFragments>
-    <audience>CUSTOMER</audience>
+    <audience>MANAGER</audience>
 </webModule>

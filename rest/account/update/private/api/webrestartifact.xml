@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <restInterface>
-    <method>GET</method>
-    <path>/node/{nodeId}/attachment/{attachmentId}</path>
-    <queryParameters>thumbnail, as, code</queryParameters>
-    <responseHeaders>Content-Type, Content-Length, Content-Disposition</responseHeaders>
+    <method>PUT</method>
+    <path>/account/{accountId}/{type}</path>
+    <role>$user</role>
+    <permissionAction>attachment.create</permissionAction>
+    <permissionContext>=input/path/accountId</permissionContext>
     <useServiceContextAsPermissionContext>false</useServiceContextAsPermissionContext>
     <useWebApplicationAsPermissionContext>false</useWebApplicationAsPermissionContext>
     <useProjectAsPermissionContext>false</useProjectAsPermissionContext>
     <useGlobalPermissionContext>false</useGlobalPermissionContext>
-    <outputAsStream>true</outputAsStream>
-    <configurationType>nabu.cms.attachment.configuration</configurationType>
-    <lenient>false</lenient>
+    <inputAsStream>true</inputAsStream>
+    <output>nabu.cms.attachment.types.rest.attachmentOutput</output>
+    <lenient>true</lenient>
     <webApplicationId>true</webApplicationId>
     <geoPosition>false</geoPosition>
     <useAsAuthorizationServiceContext>false</useAsAuthorizationServiceContext>
     <language>false</language>
     <allowFormBinding>false</allowFormBinding>
     <caseInsensitive>false</caseInsensitive>
-    <cache>true</cache>
-    <allowCookiesWithoutReferer>true</allowCookiesWithoutReferer>
+    <cache>false</cache>
+    <allowCookiesWithoutReferer>false</allowCookiesWithoutReferer>
     <allowCookiesWithExternalReferer>false</allowCookiesWithExternalReferer>
     <request>false</request>
     <allowHeaderAsQueryParameter>false</allowHeaderAsQueryParameter>
@@ -28,9 +29,6 @@
     <domain>false</domain>
     <origin>false</origin>
     <scheme>false</scheme>
-    <temporaryAlias>=input/query/as</temporaryAlias>
-    <temporarySecret>=input/query/code</temporarySecret>
-    <temporaryCorrelationId>=input/path/attachmentId</temporaryCorrelationId>
     <ignoreOffline>false</ignoreOffline>
     <allowRootArrays>false</allowRootArrays>
     <captureErrors>false</captureErrors>

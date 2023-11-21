@@ -1,0 +1,70 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="1af39852eb4449069097708cea7f5c91"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="6c3ddd095fab4e8092f2af3e9d87e8d8"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="002dae9a96324737874d2596f9c3aef6"
+				serviceId="nabu.cms.core.services.masterdata.entry.get"
+				resultName="result1600899da1654044baf7b11d5b49494f"
+				temporaryMapping="true"
+				x="335"
+				y="92"
+				invocationOrder="1"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="6c2f81ac53b648f1a95cad523b8bec0d"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>resultae74ca71eb17486aba88c1fe96ef6156/globalContext/id</from>
+				<to>ownerId</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="c022e007b756495ebf2752c58755cd82"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/attachmentGroup</from>
+				<to>name</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="49f354c7244f4916ab2536736c3ca4a6"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>attachmentGroup</from>
+				<to>category</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="d347ddc372a545d49fe823cb941ff7a2"
+				serviceId="nabu.cms.core.services.context.getGlobalContext"
+				resultName="resultae74ca71eb17486aba88c1fe96ef6156"
+				temporaryMapping="true"
+				x="45"
+				y="63"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="b94ae250a93a4bb28fcb94f2b90ee4d8"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result1600899da1654044baf7b11d5b49494f/masterDataEntry</from>
+			<to>output/attachmentGroup</to>
+		</steps>
+	</steps>
+</sequence>

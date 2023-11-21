@@ -1,0 +1,7 @@
+<structure interface="nabu.cms.attachment.manage.rest.update:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="nodeAttachments" definition="nabu.cms.attachment.crud.nodeAttachment.types.output" maxOccurs="unbounded" minOccurs="0" name="existing"/>
+    <structure collectionName="accounts" definition="nabu.cms.core.crud.account.types.output" duplicate="id, created, modified" name="account"/>
+    <field minOccurs="0" name="uri" type="java.net.URI"/>
+</structure>

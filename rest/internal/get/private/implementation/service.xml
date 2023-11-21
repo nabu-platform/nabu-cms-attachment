@@ -123,7 +123,8 @@
 				id="08583909-c5bb-4b7f-b139-2a078a3a4bed"
 				label="attachment == null"
 				lineNumber="6"
-				message="=&quot;Invalid attachment: &quot; + input/path/attachmentId" xsi:nil="true"/>
+				message="=&quot;Invalid attachment: &quot; + input/path/attachmentId"
+				whitelist="false" xsi:nil="true"/>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			comment="Map output"

@@ -1,0 +1,6 @@
+<structure interface="nabu.cms.attachment.rest.internal.get:implementation" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="nodeAttachments" definition="nabu.cms.attachment.types.model.attachments.NodeAttachment" minOccurs="0" name="attachment"/>
+    <structure collectionName="masterDataEntries" definition="nabu.cms.core.crud.masterDataEntry.types.output" name="attachmentGroup"/>
+</structure>
