@@ -19,4 +19,5 @@
     <field foreignKey="nabu.cms.core.types.emodel.core.User:id" minOccurs="0" name="ownerId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
     <field comment="With &quot;meta&quot; you can do complex layouts etc but in most usecases a simple priority is enough to order the attachments" minOccurs="0" name="priority" type="java.lang.Integer"/>
     <field foreignKey="nabu.cms.core.types.emodel.core.Node:id" name="nodeId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="A reference that (combined with the node id) should be unique. It can be used to target specific attachments like logos etc" minOccurs="0" name="reference" type="java.lang.String"/>
 </structure>

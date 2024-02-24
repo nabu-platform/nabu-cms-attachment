@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2024-02-23T16:15:40.095+01:00" lastModified="2024-02-23T16:25:04.011+01:00" leaf="true" version="17">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.utils.types.ParameterDescription</references>
+    <references>nabu.utils.Enrichment.configuration</references>
+    <references>nabu.utils.types.EnrichmentConfiguration</references>
+    <references>nabu.utils.reflection.Type.set</references>
+    <references>nabu.cms.attachment.services.getUrl</references>
+    <references>nabu.utils.Map.create</references>
+    <references>nabu.utils.reflection.Type.describe</references>
+    <references>nabu.utils.Map.put</references>
+    <references>nabu.web.application.Services.current</references>
+    <references>be.nabu.eai.repository.api.ObjectEnricher.apply</references>
+    <references>nabu.cms.attachment.crud.nodeAttachment.types.output</references>
+    <references>nabu.utils.Map.get</references>
+    <references>java.util.Map</references>
+    <references>java.lang.Object</references>
+    <references>java.lang.String</references>
+    <references>nabu.cms.attachment.crud.nodeAttachment.services.list</references>
+    <references>nabu.utils.reflection.Type.get</references>
+</node>

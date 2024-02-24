@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.types.simple.SimpleTypeManager" created="2024-02-24T09:51:12.515+01:00" lastModified="2024-02-24T09:51:17.009+01:00" leaf="true" name="anyURI" version="3">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>java.net.URI</references>
+</node>
