@@ -74,7 +74,8 @@
 						id="32258717-c736-4bf8-a972-f4efb36a47f6"
 						label="input/name !# input/configuration/thumbnails/name"
 						lineNumber="6"
-						message="=&quot;Invalid thumbnail name: &quot; + input/name" xsi:nil="true"/>
+						message="=&quot;Invalid thumbnail name: &quot; + input/name"
+						whitelist="false" xsi:nil="true"/>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					comment="Get thumbnail definition"
@@ -505,32 +506,32 @@
 					lineNumber="9">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
-						id="da86478a-9cf1-4ed1-a8c8-04d2db79e905"
-						serviceId="nabu.cms.attachment.database.attachment.insert"
-						resultName="resultb5f7744152284eac8c2d8f399090ad10"
+						id="7d7ba1b96fc54d3e95352f71da91c780"
+						serviceId="nabu.services.jdbc.Services.insert"
+						resultName="result3b61e9c2bada40389dcb561984b9f80c"
 						temporaryMapping="true"
-						x="53"
-						y="64"
+						x="119"
+						y="221"
 						invocationOrder="0"
 						asynchronous="false"
 						recache="false">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 							disabled="false"
-							id="7905e3bc-6178-4152-ba5d-767460d41b4a"
+							id="36d99db17d82437c8f72fdf215dbb9b2"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>output/thumbnail</from>
+						<to>instances[0]</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="31c2a75033044e10ba76be9bf159b1b2"
 							mask="false"
 							optional="false"
 							fixedValue="false">
 						<from>input/configuration/connectionId</from>
 						<to>connection</to>
-					</steps>
-					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-							disabled="false"
-							id="ce60f853-1791-4882-9bcb-d489e615e305"
-							mask="false"
-							optional="false"
-							fixedValue="false">
-						<from>output/thumbnail</from>
-						<to>parameters[0]</to>
 					</steps>
 				</steps>
 			</steps>

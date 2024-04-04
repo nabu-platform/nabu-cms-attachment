@@ -1,4 +1,4 @@
-<structure interface="$self:api" name="pipeline">
+<structure interface="nabu.cms.attachment.rest.update:api" name="pipeline">
     <structure name="input"/>
     <structure name="output"/>
     <structure collectionName="NodeAttachments" definition="nabu.cms.attachment.types.model.attachments.NodeAttachment" minOccurs="0" name="attachment" namespace="nabu.cms.attachment.types.model.attachments"/>

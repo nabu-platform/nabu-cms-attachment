@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2020-04-14T18:54:17.519+02:00" lastModified="2022-11-17T19:34:07.186+01:00" leaf="true" version="30">
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2020-04-14T18:54:17.519+02:00" lastModified="2024-03-12T10:56:14.230+01:00" leaf="true" version="31">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
+    <locked>false</locked>
     <properties/>
     <references>nabu.frameworks.datastore.Services.store</references>
     <references>nabu.cms.attachment.configuration</references>
     <references>nabu.frameworks.datastore.Services.retrieve</references>
     <references>nabu.frameworks.datastore.Services.properties</references>
-    <references>nabu.cms.attachment.database.attachment.insert</references>
     <references>nabu.utils.Server.uuid</references>
     <references>nabu.cms.attachment.types.model.attachments.NodeAttachment</references>
     <references>java.lang.Integer</references>
     <references>nabu.cms.attachment.database.attachment.selectByParentIdAndGroup</references>
     <references>nabu.utils.Image.resize</references>
+    <references>nabu.services.jdbc.Services.insert</references>
     <references>nabu.utils.Image.getMetaData</references>
     <references>nabu.cms.core.services.masterdata.entry.get</references>
     <references>java.lang.String</references>

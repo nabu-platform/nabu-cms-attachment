@@ -383,36 +383,6 @@
 			disabled="false"
 			id="4a45ff92-4f8f-4574-a232-9a2230d50fa4"
 			lineNumber="11">
-		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
-				disabled="false"
-				id="4d9519b6-e0f5-493f-b55f-314e17112fda"
-				serviceId="nabu.cms.attachment.database.attachment.insert"
-				resultName="result48c5492c06014bb89986419cfbc5f6a1"
-				temporaryMapping="true"
-				x="90"
-				y="110"
-				invocationOrder="0"
-				asynchronous="false"
-				recache="false">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="ebc8bb17-f4c6-4542-b6f4-25749ac175a1"
-					mask="false"
-					optional="false"
-					fixedValue="false">
-				<from>attachment</from>
-				<to>parameters[0]</to>
-			</steps>
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="00b5ce7d-948d-40a0-9184-ff86b0a8e4dc"
-					mask="false"
-					optional="false"
-					fixedValue="false">
-				<from>input/connectionId</from>
-				<to>connection</to>
-			</steps>
-		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 				disabled="false"
 				id="52aacf91-a790-445c-8658-94c66e4da4c4"
@@ -430,6 +400,36 @@
 				fixedValue="false">
 			<from>attachment</from>
 			<to>output/raw</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="07a20c3c06054620ac5d4a3bf9431691"
+				serviceId="nabu.services.jdbc.Services.insert"
+				resultName="result51aeb05399374f2b8e60f2c3ae9e1cef"
+				temporaryMapping="true"
+				x="25"
+				y="485"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="8dfa6702c39f4d8f8342ff8c05681a1f"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>attachment</from>
+				<to>instances[0]</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="d15e59957c034ea0800e94a70e69068b"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/connectionId</from>
+				<to>connection</to>
+			</steps>
 		</steps>
 	</steps>
 </sequence>

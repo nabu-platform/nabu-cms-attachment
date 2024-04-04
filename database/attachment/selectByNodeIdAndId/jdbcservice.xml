@@ -1,26 +1,6 @@
 <jdbcService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<outputDefinition>nabu.cms.attachment.types.model.attachments.NodeAttachment</outputDefinition>
-	<sql>select
-	id,
-	created,
-	modified,
-	parent_id,
-	type,
-	sub_type,
-	size,
-	width,
-	height,
-	name,
-	title,
-	description,
-	uri,
-	external,
-	language_id,
-	attachment_group_id,
-	meta,
-	owner_id,
-	priority,
-	node_id
+	<sql>select *
 from ~node_attachments
 where node_id = :nodeId
 and id = :id</sql>

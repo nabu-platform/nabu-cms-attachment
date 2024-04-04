@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-09-30T17:16:00.907+02:00" lastModified="2023-09-30T17:16:00.907+02:00" leaf="true" version="47">
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-09-30T17:16:00.907+02:00" lastModified="2024-03-12T10:55:50.818+01:00" leaf="true" version="48">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
     <properties/>
     <references>nabu.frameworks.datastore.Services.retrieve</references>
     <references>nabu.frameworks.datastore.Services.properties</references>
-    <references>nabu.cms.attachment.database.attachment.insert</references>
     <references>nabu.utils.Server.uuid</references>
     <references>nabu.utils.Date.now</references>
     <references>java.util.UUID</references>
     <references>nabu.cms.attachment.types.model.attachments.NodeAttachment</references>
     <references>java.lang.Integer</references>
+    <references>nabu.services.jdbc.Services.insert</references>
     <references>nabu.cms.core.types.model.core.Node</references>
     <references>nabu.utils.Image.getMetaData</references>
     <references>nabu.cms.attachment.types.rest.attachmentOutput</references>

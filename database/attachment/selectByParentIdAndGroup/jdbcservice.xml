@@ -1,26 +1,6 @@
 <jdbcService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<outputDefinition>nabu.cms.attachment.types.model.attachments.NodeAttachment</outputDefinition>
-	<sql>select
-	a.id,
-	a.created,
-	a.modified,
-	a.parent_id,
-	a.type,
-	a.sub_type,
-	a.size,
-	a.width,
-	a.height,
-	a.name,
-	a.title,
-	a.description,
-	a.uri,
-	a.external,
-	a.language_id,
-	a.attachment_group_id,
-	a.meta,
-	a.owner_id,
-	a.priority,
-	a.node_id
+	<sql>select *
 from ~node_attachments a join ~master_data_entries m on a.attachment_group_id = m.id
 where a.parent_id = :parentId
 and m.name = :attachmentGroup </sql>

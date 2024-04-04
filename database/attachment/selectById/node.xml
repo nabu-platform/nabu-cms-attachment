@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.jdbc.JDBCServiceManager" deprecated="2023-09-30T15:52:55.836+02:00" lastModified="2018-03-15T15:49:41.877+01:00" leaf="false" version="10">
-    <environmentId>hyperion</environmentId>
+<node artifactManager="be.nabu.eai.module.services.jdbc.JDBCServiceManager" created="2024-03-12T10:55:15.389+01:00" deprecated="2023-09-30T15:52:55.836+02:00" lastModified="2024-03-12T10:55:15.389+01:00" leaf="false" version="11">
+    <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
     <properties/>
@@ -8,9 +8,10 @@
     <references>java.lang.Long</references>
     <references>java.lang.Integer</references>
     <references>java.lang.Boolean</references>
-    <references>nabu.cms.attachment.database.attachment.selectById.parameters</references>
+    <references>be.nabu.libs.services.jdbc.AffixInput</references>
     <references>be.nabu.libs.types.api.KeyValuePair</references>
     <references>nabu.cms.attachment.types.model.attachments.NodeAttachment</references>
+    <references>be.nabu.libs.services.jdbc.api.Statistic</references>
     <references>java.lang.Long</references>
     <references>java.lang.Boolean</references>
 </node>
