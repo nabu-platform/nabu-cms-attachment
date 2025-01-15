@@ -207,7 +207,7 @@
 				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-					comment="Map the webApplicationId"
+					comment="Map the configuration"
 					disabled="false"
 					id="9b6393d8712141ddb6f2e0c764aa9e31"
 					lineNumber="10">
@@ -239,15 +239,6 @@
 							fixedValue="false">
 						<from>fieldToEnrich</from>
 						<to>key</to>
-					</steps>
-					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-							disabled="false"
-							id="ef50397d006c486e99f01315e825c7dd"
-							mask="false"
-							optional="false"
-							fixedValue="false">
-						<from>configuration/enrich/value</from>
-						<to>value</to>
 					</steps>
 					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 							disabled="false"
